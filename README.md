@@ -1,4 +1,4 @@
-# Navday WWW Project
+# Blueharvest Bank app
 
 This files contains information on this projects.
 
