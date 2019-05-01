@@ -1,0 +1,21 @@
+#parse("/velocity/layout.vm")
+#@mainLayout()
+    #if($account)
+        <div>
+            <label>$msg.get("ACCOUNT_NUMBER"):&nbsp;$account.number</label><br>
+            <label>$msg.get("ACCOUNT_ACCOUNT_HOLDER"):&nbsp;$customer.name&nbsp;$customer.sureName</label>
+            <br><br>
+        </div>
+        <form id="updateAccountForm" action="/account/$account.number" method="post">
+            <label>$msg.get("ACCOUNT_AMOUNT")</label>
+            <input type="number" step="0.01" name="amount" placeholder="$msg.get("ACCOUNT_LABEL_AMOUNT")" value="$account.amount" required>
+            <input type="submit" value="$msg.get("UPDATE_ACCOUNT")">
+            <br>
+        </form>
+        #if($success)
+        <p class="good notification">$msg.get("TRANSACTION_ID"):&nbsp;$transaction_id</p>
+        #end
+    #else
+    <h1>$msg.get("ACCOUNTS_ACCOUNT_NOT_FOUND")</h1>
+    #end
+#end

@@ -1,0 +1,14 @@
+#parse("/velocity/layout.vm")
+#@mainLayout()
+<form id="createAccountForm" method="post">
+    <h1>$msg.get("ACCOUNT_CREATE_ACCOUNT")</h1>
+    <label>$msg.get("ACCOUNT_AMOUNT")</label>
+    <input type="number" step="0.01" name="amount" placeholder="$msg.get("ACCOUNT_LABEL_CREATE_AMOUNT")" value="" required>
+    <br><label>$msg.get("CUSTOMER_ID_LABEL")</label>
+    <input type="text" name="name" placeholder="$msg.get("CUSTOMER_ID_LABEL")" value="" required>
+    <br><input type="submit" value="$msg.get("ACCOUNT_BUTTON_CREATE_ACCOUNT")">
+</form>
+    #if($success)
+    <p class="good notification">$msg.get("ACCOUNT_CREATED"):$new_account</p>
+    #end
+#end

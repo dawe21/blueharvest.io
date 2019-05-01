@@ -1,0 +1,13 @@
+#parse("/velocity/layout.vm")
+#@mainLayout()
+<h1>$msg.get("ACCOUNTS_HEADING_ALL")</h1>
+<div class="row row-3">
+    #foreach($account in $accounts)
+        <div class="col">
+                <a class="account" href="/account/$account.number">
+                    $msg.get("ACCOUNTS_CAPTION", $account.number)
+                </a>
+        </div>
+    #end
+</div>
+#end

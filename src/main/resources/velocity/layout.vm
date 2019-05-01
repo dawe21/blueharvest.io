@@ -1,0 +1,39 @@
+#macro(mainLayout)
+<html>
+<head>
+    <title>$msg.get("COMMON_TITLE")</title>
+    <link rel="stylesheet" href="/main.css">
+    <link rel="icon" href="/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/index"><img number="logo" src="/img/logo.png" alt="The Blue Bank"></a>
+            <ul id="chooseLanguage">
+                <form>
+                    <li>
+                        <button name="locale" value="nl" style="background-image: url(/img/dutch.png);"></button>
+                    </li>
+                    <li>
+                        <button name="locale" value="en" style="background-image: url(/img/english.png);"></button>
+                    </li>
+                </form>
+            </ul>
+            <ul id="menu">
+                <li><a href="/accounts">$msg.get("COMMON_NAV_ALLACCOUNTS")</a></li><br>
+                <li><a href="/create_account">$msg.get("ACCOUNT_CREATE_ACCOUNT")</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="content">
+            $bodyContent
+        </div>
+    </main>
+    <footer>
+        $msg.get("COMMON_FOOTER_TEXT")
+    </footer>
+</body>
+</html>
+#end
