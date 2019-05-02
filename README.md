@@ -57,6 +57,9 @@ curl http://localhost:7000/api/customer/0
 ### Get the one account by Account Id {1234000000000}
 curl http://localhost:7000/api/account/1234000000000
 
+### Get all the accounts
+http://localhost:7000/api/accounts
+
 ---
 
 ## GitHub
