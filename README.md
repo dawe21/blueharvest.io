@@ -32,64 +32,60 @@ From the root directory, run ``mvn clean install`` to build
 
 ## Deploy and Run the Application
 
-### Run
-java -jar target/accounts-1.0.0-SNAPSHOT-jar-with-dependencies.jar
+### Build the application
+mvn clean install
 
-http://localhost:7000/index.html (static file)
+### Run the application
+java -jar target/bank-app-1.0.0-SNAPSHOT-jar-with-dependencies.jar
+
+### Access GUI
 http://localhost:7000/index
 
-## Add static files to the project
+To test - use curl commands (or browser for non POST requests):
+
+# Add a new customer
+curl -X POST -d '{"name":"David","sureName":"Welander"}' http://localhost:7000/api/customer
+
+# Get all transactions and all accounts for all customers
+curl http://localhost:7000/api/customers
+
+# Add a new account to customer (with something on the account, creates an transaction also)
+curl -X POST -d '{"amount":"1000","customerId":"0"}' http://localhost:7000/api/account
+
+# Get the customer by Customer Id {0}
+curl http://localhost:7000/api/customer/0
+
+# Get the one account by Account Id {1234000000000}
+curl http://localhost:7000/api/account/1234000000000
+
+
+## How to Add static files to the project
 
 If you do app.enableStaticFiles("/classpath-folder"). Your index.html file at /classpath-folder/index.html will be available at http://{host}:{port}/index.html and http://{host}:{port}/.
 
-Static files are placed under:
-
+# Static files
 src/main/resources/public/index.html
 
-Start page is here : http://localhost:7000/index.html
-
-Step 3. Make static file present data from rest service
-
-Step 4. Deploy to heruko
-Open a terminal and navigate to your project root, then enter:
-heroku create blueharvest.io
-then to deploy
-mvn heroku:deploy
+# Start page
+http://localhost:7000/index
 
 ---
 
 ## GitHub
 
-Clone the repo
+# Clone the repo
 git clone https://user@github.com/dawe21/blueharvest.io.git
 
-Add file(s)
+# Add file(s)
 git add .
 Commit the changes
 git commit -m "Add existing file"
 
-Switch branch
+# Switch branch
 git fetch
 git checkout development
 
-1. Push the changes in your local repository to GitHub
+# Push the changes in your local repository to GitHub
 git push origin master
 (git push https://user@bgithub.com/dawe21/blueharvest.io.git origin master)
 
----
-***
-Step 2. and 3. not needed since build automatic when pushing to GitHub
-***
-
-2. Push to remote heroku
-git push heroku master
-
-3. Deploy on heroku
-mvn heroku:deploy
----
-ck **Clone**.
-4. Open the directory you just created to see your repository’s files.
-
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
-
----
