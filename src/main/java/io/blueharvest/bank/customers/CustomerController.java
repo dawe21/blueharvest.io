@@ -26,7 +26,7 @@ public class CustomerController {
 
    public static Handler createCustomer = ctx -> {
       Customer customer = ctx.bodyAsClass(Customer.class);
-      Customer createdCustomer = CustomerService.instance().createCustomer(customer.getName(),customer.getSureName());
+      Customer createdCustomer = CustomerService.instance().createCustomer(customer.getName(),customer.getSurname());
       CustomerService.instance().addCustomer(createdCustomer);
       ctx.json(createdCustomer);
    };

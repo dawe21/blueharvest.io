@@ -3,7 +3,7 @@
     #if($account)
         <div>
             <label>$msg.get("ACCOUNT_NUMBER"):&nbsp;$account.number</label><br>
-            <label>$msg.get("ACCOUNT_ACCOUNT_HOLDER"):&nbsp;$customer.name&nbsp;$customer.sureName</label>
+            <label>$msg.get("ACCOUNT_ACCOUNT_HOLDER"):&nbsp;$customer.name&nbsp;$customer.surname</label>
             <br><br>
         </div>
         <form id="updateAccountForm" action="/account/$account.number" method="post">

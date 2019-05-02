@@ -10,6 +10,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 public class CustomerService {
+
    /**
     * CustomerService is a Singelton
     * We only want one instance of the CustomerService.
@@ -37,11 +38,11 @@ public class CustomerService {
       return customers.get(cid);
    }
 
-   public Customer createCustomer(String name, String sureName) {
+   public Customer createCustomer(String name, String surname) {
       Customer customer = new Customer();
       customer.setCustomerId(nextCustomerNumber());
       customer.setName(name);
-      customer.setSureName(sureName);
+      customer.setSurname(surname);
       return customer;
    }
 

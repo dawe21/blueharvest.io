@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 public class Customer {
    private String customerId = "";
    private String name = "";
-   private String sureName = "";
+   private String surname = "";
 
    public Map<String, Account> accounts = new HashMap<>();
 
@@ -31,12 +31,12 @@ public class Customer {
       this.name = name;
    }
 
-   public String getSureName() {
-      return sureName;
+   public String getSurname() {
+      return surname;
    }
 
-   public void setSureName(String sureName) {
-      this.sureName = sureName;
+   public void setSurname(String surname) {
+      this.surname = surname;
    }
 
    @Override
@@ -44,7 +44,7 @@ public class Customer {
       return "Customer{" +
               "customerId='" + customerId + '\'' +
               ", name='" + name + '\'' +
-              ", sureName='" + sureName + '\'' +
+              ", surname='" + surname + '\'' +
               '}';
    }
 

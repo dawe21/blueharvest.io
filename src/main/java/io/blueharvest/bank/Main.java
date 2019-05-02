@@ -47,7 +47,7 @@ public class Main {
 
                /* Requirement: Create Customer
                Can be tested with curl command from commandline:
-               curl -X POST -d '{"name":"David","sureName":"welander"}' http://localhost:7000/api/customer
+               curl -X POST -d '{"name":"David","surname":"welander"}' http://localhost:7000/api/customer
                */
 
             /* Requirement: Get Customer with Id

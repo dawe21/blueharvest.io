@@ -42,7 +42,7 @@ http://localhost:7000/index
 ## To test - use curl commands (or browser for non POST requests):
 
 ### Add a new customer
-curl -X POST -d '{"name":"Donald","sureName":"Duck"}' http://localhost:7000/api/customer
+curl -X POST -d '{"name":"Donald","surname":"Duck"}' http://localhost:7000/api/customer
 
 ### Get all transactions and all accounts for all customers
 curl http://localhost:7000/api/customers
