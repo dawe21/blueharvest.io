@@ -57,34 +57,23 @@ curl http://localhost:7000/api/customer/0
 ### Get the one account by Account Id {1234000000000}
 curl http://localhost:7000/api/account/1234000000000
 
-
-## How to Add static files to the project
-
-If you do app.enableStaticFiles("/classpath-folder"). Your index.html file at /classpath-folder/index.html will be available at http://{host}:{port}/index.html and http://{host}:{port}/.
-
-### Static files
-src/main/resources/public/index.html
-
-### Start page
-http://localhost:7000/index
-
 ---
 
 ## GitHub
 
-# Clone the repo
+### Clone the repo
 git clone https://user@github.com/dawe21/blueharvest.io.git
 
-# Add file(s)
+### Add file(s)
 git add .
-Commit the changes
+### Commit the changes
+
 git commit -m "Add existing file"
 
-# Switch branch
+### Switch branch
 git fetch
 git checkout development
 
-# Push the changes in your local repository to GitHub
+### Push the changes in your local repository to GitHub
 git push origin master
 (git push https://user@bgithub.com/dawe21/blueharvest.io.git origin master)
-
