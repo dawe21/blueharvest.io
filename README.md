@@ -14,15 +14,16 @@ git clone https://github.com/dawe21/blueharvest.io.git
 
 ### Add file(s)
 git add .
-Commit the changes
+
+### Commit the changes
 git commit -m "Add existing file"
 
 ### Switch branch
 git fetch
 git checkout development
 
-Push the changes in your local repository to GitHub
-git push origin your-branch
+## Push the changes
+git push origin master
 
 ## Building
 
@@ -79,4 +80,4 @@ git checkout development
 
 ### Push the changes in your local repository to GitHub
 git push origin master
-(git push https://user@bgithub.com/dawe21/blueharvest.io.git origin master)
+
