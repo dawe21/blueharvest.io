@@ -1,9 +1,7 @@
 # Blueharvest Bank app
-
 This files contains information on this projects.
 
 ## Versioning
-
 GitHub: https://github.com/dawe21/blueharvest.io
 
 ### Find the repo
@@ -64,20 +62,14 @@ http://localhost:7000/api/accounts
 ---
 
 ## GitHub
-
 ### Clone the repo
 git clone https://user@github.com/dawe21/blueharvest.io.git
-
 ### Add file(s)
 git add .
 ### Commit the changes
-
 git commit -m "Add existing file"
-
 ### Switch branch
 git fetch
 git checkout development
-
 ### Push the changes in your local repository to GitHub
 git push origin master
-
