@@ -6,10 +6,10 @@
     <input type="number" step="0.01" name="amount" placeholder="$msg.get("ACCOUNT_LABEL_CREATE_AMOUNT")" value="" required>
     <br><label>$msg.get("CUSTOMER_ID_LABEL")</label>
     <input type="text" name="cid" placeholder="$msg.get("CUSTOMER_ID_LABEL")" value="" required>
-    <br><label>$msg.get("ACCOUNT_LABEL_NAME")</label>
+    <br><label>$msg.get("CUSTOMER_LABEL_NAME")</label>
     <input type="text" name="name" placeholder="$msg.get("CUSTOMER_LABEL_NAME")" value="" required>
-    <br><label>$msg.get("ACCOUNT_LABEL_SURNAME")</label>
-    <input type="text" name="name" placeholder="$msg.get("CUSTOMER_LABEL_SURNAME")" value="" required>
+    <br><label>$msg.get("CUSTOMER_LABEL_SURNAME")</label>
+    <input type="text" name="surname" placeholder="$msg.get("CUSTOMER_LABEL_SURNAME")" value="" required>
     <br><input type="submit" value="$msg.get("ACCOUNT_BUTTON_CREATE_ACCOUNT")">
 </form>
     #if($success)
