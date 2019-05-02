@@ -6,18 +6,18 @@ This files contains information on this projects.
 
 GitHub: https://github.com/dawe21/blueharvest.io
 
-Find the repo
+### Find the repo
 https://github.com/dawe21/blueharvest.io
 
-Clone the repo
+### Clone the repo
 git clone https://github.com/dawe21/blueharvest.io.git
 
-Add file(s)
+### Add file(s)
 git add .
 Commit the changes
 git commit -m "Add existing file"
 
-Switch branch
+### Switch branch
 git fetch
 git checkout development
 
@@ -26,8 +26,7 @@ git push origin your-branch
 
 ## Building
 
-This project uses Maven for building. Common commands:
-
+### This project uses Maven for building
 From the root directory, run ``mvn clean install`` to build
 
 ## Deploy and Run the Application
@@ -41,21 +40,21 @@ java -jar target/bank-app-1.0.0-SNAPSHOT-jar-with-dependencies.jar
 ### Access GUI
 http://localhost:7000/index
 
-To test - use curl commands (or browser for non POST requests):
+## To test - use curl commands (or browser for non POST requests):
 
-# Add a new customer
+### Add a new customer
 curl -X POST -d '{"name":"David","sureName":"Welander"}' http://localhost:7000/api/customer
 
-# Get all transactions and all accounts for all customers
+### Get all transactions and all accounts for all customers
 curl http://localhost:7000/api/customers
 
-# Add a new account to customer (with something on the account, creates an transaction also)
+### Add a new account to customer (with something on the account, creates an transaction also)
 curl -X POST -d '{"amount":"1000","customerId":"0"}' http://localhost:7000/api/account
 
-# Get the customer by Customer Id {0}
+### Get the customer by Customer Id {0}
 curl http://localhost:7000/api/customer/0
 
-# Get the one account by Account Id {1234000000000}
+### Get the one account by Account Id {1234000000000}
 curl http://localhost:7000/api/account/1234000000000
 
 
@@ -63,10 +62,10 @@ curl http://localhost:7000/api/account/1234000000000
 
 If you do app.enableStaticFiles("/classpath-folder"). Your index.html file at /classpath-folder/index.html will be available at http://{host}:{port}/index.html and http://{host}:{port}/.
 
-# Static files
+### Static files
 src/main/resources/public/index.html
 
-# Start page
+### Start page
 http://localhost:7000/index
 
 ---
